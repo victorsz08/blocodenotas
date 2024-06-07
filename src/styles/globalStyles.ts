@@ -55,8 +55,6 @@ export default  createGlobalStyle`
         font-weight: 700;
         cursor: pointer;
     }
-
-<<<<<<< HEAD
     .background-accent {
         background-color: ${props => props.theme.accent};
         border: none;
@@ -64,13 +62,8 @@ export default  createGlobalStyle`
     }
 
     .box-shadow {
-        box-shadow: 0 0 5px ${props => props.theme.shawdow}
+        box-shadow: 0 0 5px ${props => props.theme.shawdow};
     }
-
-    
-
-=======
->>>>>>> fffd17fed6fa543283144a3f6d811e940a406f16
     .nt-input {
         background-color: ${props => props.theme.background};
         color: ${props => props.theme.text};
