@@ -42,20 +42,20 @@ input {
 
 table{
     margin: 1rem 0;
-    font-size: .7rem;
+    font-size: .8rem;
+    border-radius: .5rem;
+    background-color: #fff;
 }
 
 table tr {
     font-weight: 800;
-    background-color: #999999;
+    background-color: #FFF;
 }
 
 table tr + tr {
-    font-weight: 600;
-
-    background-color: #D6D6D6;
+    font-weight: 500;
 } 
 
 table td {
-    padding: .5rem;
+    padding: .7rem;
 }

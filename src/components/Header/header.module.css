@@ -8,6 +8,7 @@
     width: 100vw;
     position: fixed;
     border-radius: 0 0 .6rem .6rem;
+    box-shadow: 0 0 10px #D6D6D6;
 }
 
 .title {
