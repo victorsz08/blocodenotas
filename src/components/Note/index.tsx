@@ -10,6 +10,6 @@ export default function Note() {
 
     return (
     <textarea value={value} onChange={e => setValue(e.target.value)} className='background-accent' 
-    style={{ height: '560px', width: '580px', resize: 'none', 
-        fontWeight: '700', border: 'none', padding:'1.2rem', fontSize: '.9rem', borderRadius: '1.2rem'}}/>
+    style={{ height: '100vh', width: '580px', resize: 'none', 
+        fontWeight: '700', border: 'none',boxShadow: '0 0 15px #d6d6d6' , padding:'1.2rem', fontSize: '.9rem', borderRadius: '1.2rem'}}/>
 )}

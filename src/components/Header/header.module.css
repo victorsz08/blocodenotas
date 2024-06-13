@@ -1,0 +1,46 @@
+.header_container {
+    background-color: #e90000;
+    color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    width: 100vw;
+    position: fixed;
+    border-radius: 0 0 .6rem .6rem;
+}
+
+.title {
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+     gap: 5px;
+}
+
+.title svg {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.nav_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.nav_container a {
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    cursor: pointer;
+    font-size: .8rem;
+    text-decoration: none;
+    color: #FFF;
+}
+.nav_container a svg {
+    width: .6rem;
+    height: .6rem;
+}

@@ -15,12 +15,13 @@
 .app {
     display: flex;
     justify-content: space-evenly;
-    padding: 3rem;
+    padding: 8rem 3rem;
+    gap: 50px;
 }
 
-.dark-mode {
+.skill-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
+    flex-direction: column;
+    gap: 30px;
 }
+
