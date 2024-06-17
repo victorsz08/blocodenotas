@@ -48,7 +48,7 @@ export default function TodoList() {
     ).then((res) => res.json());
 
     setCityArr(response);
-    setCity(response[0])
+    setCity(response[0].nome)
   };
 
   function handleSubmit(e: React.FormEvent) {
