@@ -28,7 +28,7 @@ export default function TodoList() {
   const [city, setCity] = useState("");
   const [contract, setContract] = useState('');
   const [number, setNumber] = useState('');
-  const [date, setDate] = useState('01/06/2024');
+  const [date, setDate] = useState('2024-06-01');
   const [list, setList] = useState<IList[]>(JSON.parse(localStorage.getItem('[LIST_CONTRACTS]') || "[]") || []);
 
   useEffect(() => {
