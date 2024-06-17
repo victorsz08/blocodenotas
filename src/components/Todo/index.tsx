@@ -61,10 +61,15 @@ export default function TodoList() {
       date: date
     };
 
+    if(!data){
+      return
+    } else {
+
     setList((list) => [...list, data]);
     setContract('');
     setNumber('');
     setDate('');
+    }
   };
 
   function handleDelete(id: number) {
