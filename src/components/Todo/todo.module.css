@@ -81,11 +81,11 @@
 .todo_container .table_container {
     margin-top: 1rem;
     font-size: .8rem;
-    overflow-x: scroll;
+    text-align: center;
 }
 
 .todo_container .table_container td  {
-    padding: .6rem .7rem;
+    padding: .6rem;
     font-weight: 400;
     background-color: #efefef;
 }
@@ -94,7 +94,7 @@
     background-color: #D6D6D6;
     font-size: .7rem;
     font-weight: 600;
-    padding: .6rem .7rem;
+    padding: .6rem .8rem;
 }
 
 .todo_container .table_container td svg {
