@@ -1,8 +1,9 @@
 .calculator_container {
     padding: 1rem;
     max-width: 280px;
-    background-color: #d6d6d6;
+    background-color: #ededed;
     border-radius: 1.2rem;
+    box-shadow: 0 0 2px #d6d6d6;
 }
 
 .calculator_container .results {
@@ -23,7 +24,9 @@
     border: none;
     border-radius: .8rem;
     font-weight: 700;
+    font-size: .9rem;
     cursor: pointer;
+    box-shadow: 0 0 3px #9c9c9c;
 }
 
 .box_1 {
