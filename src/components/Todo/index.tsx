@@ -70,7 +70,7 @@ export default function TodoList() {
     setList((list) => [...list, data]);
     setContract('');
     setNumber('');
-    setDate('');
+    setDate('2024-06-17');
     }
   };
 
