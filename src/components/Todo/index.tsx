@@ -24,7 +24,7 @@ type IList = {
 export default function TodoList() {
   const [cityArr, setCityArr] = useState<ICity[]>([]);
   const [state, setState] = useState("SP");
-  const [city, setCity] = useState('');
+  const [city, setCity] = useState(cityArr[0] || "");
   const [contract, setContract] = useState('');
   const [number, setNumber] = useState('');
   const [date, setDate] = useState('01/06/2024');
@@ -90,7 +90,7 @@ export default function TodoList() {
           <div className={style.box_1}>
             <div className={style.input_component}>
               <label>Número do Contrato</label>
-              <input type="text" placeholder="Ex:123456789" value={contract} onChange={(e) => setContract(e.target.value)} />
+              <input type="text" placeholder="Ex:123456789" required value={contract} onChange={(e) => setContract(e.target.value)} />
             </div>
             <div className={style.input_component}>
               <label>Estado</label>
@@ -112,11 +112,11 @@ export default function TodoList() {
           <div className={style.box_2}>
             <div className={style.input_component}>
               <label>Número do Cliente</label>
-              <input type="tel" placeholder="(88) 8888-8888" value={number} onChange={(e) => setNumber(e.target.value)} />
+              <input type="tel" required placeholder="(88) 8888-8888" value={number} onChange={(e) => setNumber(e.target.value)} />
             </div>
             <div className={style.input_component}>
               <label>Data de Instalação</label>
-              <input type="date" placeholder="12/01/2024" value={date} onChange={(e) => setDate(e.target.value)} />
+              <input type="date" required placeholder="12/01/2024" value={date} onChange={(e) => setDate(e.target.value)} />
             </div>
           </div>
         </div>
