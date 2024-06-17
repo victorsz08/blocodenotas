@@ -25,7 +25,7 @@ type IList = {
 export default function TodoList() {
   const [cityArr, setCityArr] = useState<ICity[]>([]);
   const [state, setState] = useState("SP");
-  const [city, setCity] = useState(cityArr[0] || "");
+  const [city, setCity] = useState("");
   const [contract, setContract] = useState('');
   const [number, setNumber] = useState('');
   const [date, setDate] = useState('01/06/2024');
@@ -48,6 +48,7 @@ export default function TodoList() {
     ).then((res) => res.json());
 
     setCityArr(response);
+    setCity(response[0])
   };
 
   function handleSubmit(e: React.FormEvent) {
