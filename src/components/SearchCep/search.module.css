@@ -21,41 +21,46 @@
 
 }
 
-button {
-    background-color: #ffff00;
+.search_cep_container button {
+    background-color: #FFF;
     color: #000;
     font-weight: 600;
     padding: .7rem 1rem;
-    border-radius: 1rem;
+    border-radius: 1.2rem;
     border: none;
     cursor: pointer;
 }
 
-input {
+.search_cep_container input {
     background-color: #FFF;
     padding: .7rem 1rem;
     border: none;
     border-radius: 1.2rem;
     width: 370px;
     margin-right: .7rem;
+    font-weight: 700;
 }
 
-table{
+.search_cep_container input:focus {
+    outline: 0;
+}
+
+.search_cep_container table{
     margin: 1rem 0;
     font-size: .8rem;
     border-radius: .5rem;
     background-color: #fff;
 }
 
-table tr {
+.search_cep_container table tr {
     font-weight: 800;
     background-color: #FFF;
 }
 
-table tr + tr {
+.search_cep_container table tr + tr {
     font-weight: 500;
 } 
 
-table td {
+.search_cep_container table td {
     padding: .7rem;
 }

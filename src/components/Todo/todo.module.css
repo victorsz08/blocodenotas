@@ -1,0 +1,110 @@
+.todo_container {
+    padding: 1.5rem;
+    box-shadow: 0 0 15px #D6D6D6;
+    width: 35rem;
+    height: 600px;
+    border-radius: 1.2rem;
+    max-height: 600px;
+    overflow-x: scroll;
+}
+
+.todo_container .form_container {
+    margin: 1.8rem 0;
+}
+
+.todo_container .form_container .input_container .input_component {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.todo_container .form_container .input_container {
+    margin: 1.4rem 0;
+}
+
+.todo_container .form_container .input_container 
+.input_component input , .todo_container 
+.form_container .input_container .input_component  select {
+    background-color: #fff;
+    font-weight: 400;
+    padding: .6rem;
+    border: 1px solid #D6D6D6;
+    max-width: 9rem;
+    font-weight: 500;
+    font-size: .8rem;
+    border-radius: .7rem;
+}
+
+.todo_container .form_container .input_container 
+.input_component input::placeholder , .todo_container 
+.form_container .input_container .input_component  select::placeholder {
+    font-style: italic;
+}
+
+.todo_container .form_container .input_container 
+.input_component label {
+    font-size: .6rem;
+    font-weight: 700;
+    margin-bottom: .4rem;
+}
+
+.todo_container .form_container button {
+    padding: .8rem 1rem;
+    background-color: #00c01d;
+    color: #FFF;
+    font-weight: 600;
+    border: none;
+    border-radius: .6rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.todo_container .form_container button:hover {
+    background-color: #003e09;
+    transition: .3s;
+}
+
+.todo_container .form_container .input_container .box_1 {
+    display: grid;
+    grid-template-columns: 9.2rem 4rem 6rem;
+    grid-template-rows: 4rem;   
+}
+
+.todo_container .form_container .input_container .box_2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4px;
+}
+
+.todo_container .table_container {
+    margin-top: 1rem;
+    font-size: .8rem;
+    overflow-x: scroll;
+}
+
+.todo_container .table_container td  {
+    padding: .6rem .7rem;
+    font-weight: 400;
+    background-color: #efefef;
+}
+
+.todo_container .table_container th {
+    background-color: #D6D6D6;
+    font-size: .7rem;
+    font-weight: 600;
+    padding: .6rem .7rem;
+}
+
+.todo_container .table_container td svg {
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.todo_container .table_container td svg:hover {
+    transform: scale(103%);
+    color: #ff0000;
+}

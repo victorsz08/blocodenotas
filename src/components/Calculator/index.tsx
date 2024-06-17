@@ -9,10 +9,16 @@ export default function Calculator() {
   function handleCalculator(e: any) {
     let num = e.target.value;
 
-    if (result === '0') {
-      setResult(num);
+    if (num === '.') {
+      if (!result.includes('.')) {
+        setResult(result + num);
+      }
     } else {
-      setResult(result + num);
+      if (result === '0') {
+        setResult(num);
+      } else {
+        setResult(result + num);
+      }
     }
   }
 
@@ -50,6 +56,16 @@ export default function Calculator() {
     setOperator('');
   }
 
+  function changeSignal(){
+    if(parseFloat(result) > 0){
+      let num = -parseFloat(result);
+      setResult(num.toString())
+    } else {
+      let num = Math.abs(parseFloat(result));
+      setResult(num.toString());
+    }
+  }
+
   function handleOperation(e: any) {
     const operationSignal = e.target.value;
 
@@ -84,7 +100,7 @@ export default function Calculator() {
       <div className={style.keyboards_container}>
         <div className={style.box_1}>
           <button onClick={clearAll} style={{ backgroundColor: 'gray' }}>AC</button>
-          <button style={{ backgroundColor: 'gray' }}>+/-</button>
+          <button onClick={changeSignal} style={{ backgroundColor: 'gray' }}>+/-</button>
           <button onClick={percent} style={{ backgroundColor: 'gray' }}>%</button>
           <button onClick={handleOperation} value={'/'} style={{ backgroundColor: 'orange' }}>/</button>
           <button onClick={handleCalculator} value={7}>7</button>

@@ -1,27 +1,14 @@
-.header-container {
+.note-container {
     display: flex;
-    justify-content: space-between;
-    padding: 1.4rem 3rem;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
 }
 
 
-.header-container svg {
-    width: 1.2rem;
-    height: 1.2rem;
-    cursor: pointer;
-}
-
-.app {
+.utils-container {
     display: flex;
-    justify-content: space-evenly;
-    padding: 8rem 3rem;
+    align-items: flex-start;
+    justify-content: center;
     gap: 50px;
 }
-
-.skill-container {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-

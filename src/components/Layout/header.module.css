@@ -1,3 +1,12 @@
+.layout_container {
+    padding: 100px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
 .header_container {
     background-color: #e90000;
     color: #FFF;
@@ -44,4 +53,17 @@
 .nav_container a svg {
     width: .6rem;
     height: .6rem;
+}
+
+
+
+.footer_container {
+    background-color: #e90000;
+    color: #D6D6D6;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-size: .7rem;
+    font-weight: 300;
+    padding: 4rem;
 }

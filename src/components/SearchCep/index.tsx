@@ -36,7 +36,6 @@ export default function SearchCep() {
     return (
         <div className={style.search_cep_container}>
             <div className={style.title}>
-                <FaHouse />
                 <h1>Buscar Logradouros</h1>
             </div>
             {!response ?
