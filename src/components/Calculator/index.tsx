@@ -9,6 +9,10 @@ export default function Calculator() {
   function handleCalculator(e: any) {
     let num = e.target.value;
 
+    if(num.split("").length > 10 || result.split("").length > 10){
+      return
+    }
+
     if (num === '.') {
       if (!result.includes('.')) {
         setResult(result + num);
