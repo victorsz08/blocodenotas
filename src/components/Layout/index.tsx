@@ -22,7 +22,7 @@ export default function Header({ children } : { children: React.ReactNode }) {
                     {children}
                 </div>
             <footer className={style.footer_container}>
-                <h4>Bloco de Notas - 2024</h4>
+                <p>Bloco de Notas - 2024</p>
             </footer>
         </section>
     )

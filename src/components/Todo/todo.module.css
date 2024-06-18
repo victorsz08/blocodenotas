@@ -1,11 +1,37 @@
 .todo_container {
     padding: 1.5rem;
     box-shadow: 0 0 15px #D6D6D6;
-    width: 35rem;
+    width: 38rem;
     height: 600px;
     border-radius: 1.2rem;
     max-height: 600px;
     overflow-x: scroll;
+}
+
+.todo_container #info {
+    position: absolute;
+    transform: translateX(34.5rem) translateY(-2.4rem);
+    color: #006eff;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.todo_container #info:hover {
+    color: #003376;
+    transition: .2s;
+}
+
+.popup {
+    font-size: .5rem;
+    width: 8rem;
+    background-color: #fff;
+    padding: .8rem;
+    position: absolute;
+    border-radius: 1.2rem;
+    box-shadow: 0 0 4px #D6d6d6;
+    transform: translateX(31rem) translateY(-1.6rem);
+    z-index: 1000;
+    transition: .5s;
 }
 
 .todo_container .form_container {
@@ -30,16 +56,16 @@
     font-weight: 400;
     padding: .6rem;
     border: 1px solid #D6D6D6;
-    max-width: 9rem;
-    font-weight: 500;
-    font-size: .8rem;
+    width: 100%;
+    font-weight: 600;
+    font-size: .7rem;
     border-radius: .7rem;
 }
 
 .todo_container .form_container .input_container 
-.input_component input::placeholder , .todo_container 
-.form_container .input_container .input_component  select::placeholder {
-    font-style: italic;
+.input_component input:focus , .todo_container 
+.form_container .input_container .input_component  select:focus {
+    outline: 0;
 }
 
 .todo_container .form_container .input_container 
@@ -67,15 +93,16 @@
 
 .todo_container .form_container .input_container .box_1 {
     display: grid;
-    grid-template-columns: 9.2rem 4rem 6rem;
+    grid-template-columns: 10rem 6rem 8rem;
     grid-template-rows: 4rem;   
+    gap: 5px;
 }
 
 .todo_container .form_container .input_container .box_2 {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 4px;
+    display: grid;
+    grid-template-columns: 14rem 10rem;
+    grid-template-rows: 4rem;
+    gap: 10px;
 }
 
 .todo_container .table_container {
@@ -86,7 +113,7 @@
 
 .todo_container .table_container td  {
     padding: .6rem;
-    font-weight: 400;
+    font-weight: 500;
     background-color: #efefef;
 }
 

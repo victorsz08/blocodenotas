@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import style from "./todo.module.css";
 import { TiDelete } from "react-icons/ti";
 import { format } from "date-fns";
+import { FaCircleInfo } from "react-icons/fa6";
 
 
 const states = [
@@ -23,13 +24,19 @@ type IList = {
 }
 
 export default function TodoList() {
+  const dateNow = new Date();
+
+
   const [cityArr, setCityArr] = useState<ICity[]>([]);
   const [state, setState] = useState("SP");
   const [city, setCity] = useState("");
   const [contract, setContract] = useState('');
   const [number, setNumber] = useState('');
-  const [date, setDate] = useState('2024-06-01');
+  const [date, setDate] = useState(format(dateNow, 'yyyy-MM-dd'));
   const [list, setList] = useState<IList[]>(JSON.parse(localStorage.getItem('[LIST_CONTRACTS]') || "[]") || []);
+  const [info, setInfo] = useState(false);
+
+  console.log(info)
 
   useEffect(() => {
     const listLocal = localStorage.getItem('[LIST_CONTRACTS]');
@@ -70,7 +77,7 @@ export default function TodoList() {
     setList((list) => [...list, data]);
     setContract('');
     setNumber('');
-    setDate('2024-06-17');
+    setDate(format(dateNow, 'yyyy-MM-dd'));
     }
   };
 
@@ -86,8 +93,16 @@ export default function TodoList() {
   return (
     <section className={style.todo_container}>
       <h2>Lista de Contratos</h2>
+      <FaCircleInfo id={style.info} onMouseEnter={() => setInfo(true)} onMouseLeave={() => setInfo(false)}/>
+        {info && 
+        <span className={style.popup} onMouseEnter={() => setInfo(true)} onMouseLeave={() => setInfo(false)}>
+              Tabela para armazenar seus contratos feitos, uma forma de organizar todos seus contratos concluídos com os
+              dados importantes para localiza-los. <strong>Atenção! Todos os dados são salvos localmente, não são hospedados
+              em nenhum Banco de Dados ou Servidores Externos, os dados são salvos no navegador da máquina localmente.
+            </strong>
+          </span>
+          }
       <form onSubmit={handleSubmit} className={style.form_container}>
-        <h4>Criar Registro</h4>
         <div className={style.input_container}>
           <div className={style.box_1}>
             <div className={style.input_component}>
@@ -128,7 +143,7 @@ export default function TodoList() {
       <table className={style.table_container}>
         <thead>
           <tr>
-            <th>Contrato</th>
+            <th>N° do Contrato</th>
             <th>Cidade/Estado</th>
             <th>Número do Cliente</th>
             <th>Data de Instalação</th>

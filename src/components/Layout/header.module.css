@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: center;
     gap: 50px;
+    z-index: 10000;
 }
 
 .header_container {
@@ -18,6 +19,7 @@
     position: fixed;
     border-radius: 0 0 .6rem .6rem;
     box-shadow: 0 0 10px #D6D6D6;
+    z-index: 100000;
 }
 
 .title {
@@ -59,11 +61,13 @@
 
 .footer_container {
     background-color: #e90000;
-    color: #D6D6D6;
-    display: grid;
+    color: #fff;
+    display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     font-size: .7rem;
     font-weight: 300;
     padding: 4rem;
+    gap: 1rem;
 }
