@@ -31,7 +31,7 @@ export default function TodoList() {
   const [city, setCity] = useState("");
   const [contract, setContract] = useState('');
   const [number, setNumber] = useState('');
-  const [date, setDate] = useState(format(dateNow, 'yyyy-MM-dd'));
+  const [date, setDate] = useState('');
   const [list, setList] = useState<IList[]>(JSON.parse(localStorage.getItem('[LIST_CONTRACTS]') || "[]") || []);
   const [info, setInfo] = useState(false);
 
@@ -76,7 +76,7 @@ export default function TodoList() {
     setList((list) => [...list, data]);
     setContract('');
     setNumber('');
-    setDate(format(dateNow, 'yyyy-MM-dd'));
+    setDate('');
     }
   };
 
