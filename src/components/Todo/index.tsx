@@ -153,7 +153,7 @@ export default function TodoList() {
               <td>{item.contract}</td>
               <td>{item.city}/{item.state}</td>
               <td>{item.number}</td>
-              <td>{format(new Date(item.date), 'dd/MM/yyyy')}</td>
+              <td>{format(item.date, 'dd/MM/yyyy')}</td>
               <td><TiDelete onClick={() => handleDelete(item.id)} className={style.delete_icon} /></td>
             </tr>
           ))}
