@@ -10,12 +10,14 @@ function App() {
       <section>
         <Header>
           <div className='note-container'>
-            <TodoList/>
+            <div className='utils-container'>
+              <SearchCep/>
+              <TodoList/>
+            </div>
             <Note/>
           </div>
           <div className='utils-container'>
             <Calculator/>
-            <SearchCep/>
           </div>
         </Header>
         </section>

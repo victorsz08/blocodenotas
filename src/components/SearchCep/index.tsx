@@ -14,6 +14,7 @@ export default function SearchCep() {
     const [data, setData] = useState('');
     const [response, setResponse] = useState<IData | any>('');
 
+    
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
@@ -44,13 +45,16 @@ export default function SearchCep() {
                 </form> :
                 <div className={style.data_container}>
                     <table>
-                        <tr className="table-reference">
-                                <td>Logradouro</td>
-                                <td>Bairro</td>
-                                <td>Cidade</td>
-                                <td>Estado</td>
-                                <td>CEP</td>
+                        <thead>
+                            <tr className="table-reference">
+                                <th>Logradouro</th>
+                                <th>Bairro</th>
+                                <th>Cidade</th>
+                                <th>Estado</th>
+                                <th>CEP</th>
                             </tr>
+                        </thead>
+                        <tbody>
                             <tr className="table">
                                 <td>{response.logradouro}</td>
                                 <td>{response.bairro}</td>
@@ -58,6 +62,7 @@ export default function SearchCep() {
                                 <td>{response.uf}</td>
                                 <td>{response.cep}</td>
                             </tr>
+                        </tbody>
                     </table>
                     <button onClick={() => { setData(''); setResponse('') }}>Nova Busca</button>
                 </div>

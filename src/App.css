@@ -9,6 +9,7 @@
 .utils-container {
     display: flex;
     align-items: flex-start;
-    justify-content: center;
-    gap: 50px;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 30px;
 }

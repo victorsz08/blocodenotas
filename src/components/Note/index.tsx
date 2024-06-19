@@ -5,11 +5,11 @@ export default function Note() {
 
     useEffect(() => {
         localStorage.setItem('notepad_value', value)
-    },[value])
+    },[value]);
 
 
     return (
-    <textarea value={value} onChange={e => setValue(e.target.value)} className='background-accent' 
-    style={{ height: '600px', width: '580px', resize: 'none', 
-        fontWeight: '700', border: 'none',boxShadow: '0 0 15px #d6d6d6' , padding:'1.2rem', fontSize: '.9rem', borderRadius: '1.2rem'}}/>
+    <textarea value={value} onChange={e => setValue(e.target.value)} 
+    style={{ height: '48.5rem', width: '580px', resize: 'none', 
+        fontWeight: '500', border: 'none',boxShadow: '0 0 15px #d6d6d6' , padding:'1.2rem', fontSize: '.9rem', borderRadius: '1.2rem'}}/>
 )}

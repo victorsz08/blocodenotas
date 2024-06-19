@@ -26,7 +26,6 @@ type IList = {
 export default function TodoList() {
   const dateNow = new Date();
 
-
   const [cityArr, setCityArr] = useState<ICity[]>([]);
   const [state, setState] = useState("SP");
   const [city, setCity] = useState("");
