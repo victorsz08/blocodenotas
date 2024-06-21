@@ -25,15 +25,13 @@ type IList = {
 
 export default function TodoList() {
   const [cityArr, setCityArr] = useState<ICity[]>([]);
-  const [state, setState] = useState("SP");
+  const [state, setState] = useState("RJ");
   const [city, setCity] = useState("");
   const [contract, setContract] = useState('');
   const [number, setNumber] = useState('');
   const [date, setDate] = useState('');
   const [list, setList] = useState<IList[]>(JSON.parse(localStorage.getItem('[LIST_CONTRACTS]') || "[]") || []);
   const [info, setInfo] = useState(false);
-
-  console.log(info)
 
   useEffect(() => {
     const listLocal = localStorage.getItem('[LIST_CONTRACTS]');
@@ -47,12 +45,23 @@ export default function TodoList() {
   }, [list]);
 
   const searchCity = async () => {
+    console.log(state === 'SP')
+
+    if(state === 'SP') {
+      const response = await fetch(
+        `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${state}/distritos?orderBy=nome`
+      ).then((res) => res.json());
+
+      setCity('São Paulo');
+      setCityArr(response);
+    } else {
     const response = await fetch(
       `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${state}/distritos?orderBy=nome`
     ).then((res) => res.json());
 
     setCityArr(response);
     setCity(response[0].nome)
+  }
   };
 
   function handleSubmit(e: React.FormEvent) {
@@ -117,6 +126,7 @@ export default function TodoList() {
             <div className={style.input_component}>
               <label>Cidade</label>
               <select value={city} onChange={(e) => setCity(e.target.value)}>
+                <option key={77777777}>São Paulo</option>
                 {cityArr.map((city) => (
                   <option key={city.id}>{city.nome}</option>
                 ))}
@@ -130,7 +140,7 @@ export default function TodoList() {
             </div>
             <div className={style.input_component}>
               <label>Data de Instalação</label>
-              <input type="date" required placeholder="12/01/2024" value={date} onChange={(e) => setDate(e.target.value)} />
+              <input type="date" required value={date} onChange={(e) => setDate(e.target.value)} />
             </div>
           </div>
         </div>
@@ -153,7 +163,7 @@ export default function TodoList() {
               <td>{item.contract}</td>
               <td>{item.city}/{item.state}</td>
               <td>{item.number}</td>
-              <td>{format(item.date, 'dd/MM/yyyy')}</td>
+              <td>{format(new Date(item.date + 'T00:00:00'), 'dd/MM/yyyy')}</td>
               <td><TiDelete onClick={() => handleDelete(item.id)} className={style.delete_icon} /></td>
             </tr>
           ))}
