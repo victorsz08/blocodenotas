@@ -126,7 +126,7 @@ export default function TodoList() {
             <div className={style.input_component}>
               <label>Cidade</label>
               <select value={city} onChange={(e) => setCity(e.target.value)}>
-                <option key={77777777}>São Paulo</option>
+               {state === 'SP' && <option key={77777777}>São Paulo</option>}
                 {cityArr.map((city) => (
                   <option key={city.id}>{city.nome}</option>
                 ))}
