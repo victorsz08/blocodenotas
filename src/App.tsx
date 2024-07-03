@@ -14,10 +14,8 @@ function App() {
           <Route path='/' element={<Header/>}>
               <Route path='/' element={<HomePage/>}/>
               <Route path='/tabelas' element={<LayoutTables/>}>
-                <Route path='/tabelas/internet' element={<TableInternet/>}/>
-                <Route path='/tabelas/claro-tv' element={<TableTv/>}/>
-                <Route path='/tabelas/claro-movel' element={<h1>INTERNET</h1>}/>
-                <Route path='/tabelas/claro-fixo' element={<h1>INTERNET</h1>}/>
+                <Route path='internet' element={<TableInternet/>}/>
+                <Route path='claro-tv' element={<TableTv/>}/>
               </Route>
             </Route>
         </Routes>
