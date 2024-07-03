@@ -10,6 +10,6 @@ export default function Note() {
 
     return (
     <textarea value={value} onChange={e => setValue(e.target.value)} 
-    style={{ height: '48.5rem', width: '580px', resize: 'none', color: '#3f3f3f',
-        fontWeight: '600', border: 'none',boxShadow: '0 0 15px #d6d6d6' , padding:'1.2rem', fontSize: '.9rem', borderRadius: '1.2rem'}}/>
+    style={{ height: '50rem', width: '580px', resize: 'none', color: '#3f3f3f',
+        fontWeight: '600', border: '1px solid #d6d6d6', outline:"0", borderTop: "8px solid #e90000",borderBottom: "8px solid #e90000", padding:'1.2rem', fontSize: '.9rem'}}/>
 )}
