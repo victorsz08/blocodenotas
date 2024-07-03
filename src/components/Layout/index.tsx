@@ -1,4 +1,4 @@
-import { CgNotes } from 'react-icons/cg'
+import { PiCompassToolFill } from "react-icons/pi";
 import style from './header.module.css';
 import { Link, Outlet } from 'react-router-dom';
 
@@ -9,8 +9,8 @@ export default function Header() {
         <section>
             <header className={style.header_container}>
                 <div className={style.title}>
-                    <CgNotes/>
-                    <h1>Bloco de Notas</h1>
+                    <PiCompassToolFill/>
+                    <h1>NoteTools</h1>
                 </div>
                 <nav className={style.nav_container}>
                     <Link to={"/"}>HOME</Link>
