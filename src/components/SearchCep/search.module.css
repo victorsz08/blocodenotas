@@ -5,7 +5,6 @@
     max-height: 320px;
     width: 38rem;
     box-shadow: 0 0 12px #d6d6d6;
-    transition: linear;
 }
 
 .title {
@@ -25,8 +24,8 @@
 
 .search_cep_container button {
     padding: .7rem 1.8rem;
-    background-color: #00c01d;
-    border: 1px solid #00c01d;
+    background-color: #e90000;
+    border: 1px solid #e90000;
     color: #FFF;
     font-weight: 400;
     border-radius: .6rem;
@@ -43,12 +42,11 @@
 .search_cep_container input {
     background-color: #FFF;
     padding: .7rem 1rem;
-    border: none;
+    border: 1px solid #D6D6D6;
     border-radius: .8rem;
     width: 370px;
     margin-right: .7rem;
     font-weight: 500;
-    box-shadow: 0 0 1px #6c6c6c;
 }
 
 .search_cep_container input:focus {

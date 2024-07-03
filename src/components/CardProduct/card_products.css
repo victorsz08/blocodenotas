@@ -7,8 +7,9 @@
     justify-content: space-between;
     align-items: flex-start;
     padding: 2rem;
-    box-shadow: 0 0 10px #d6d6d6;
-    border-radius: 1.2rem;
+    box-shadow: 0 0 3px #d6d6d6;
+    border-top: 8px solid #e90000;
+    border-bottom: 8px solid #e90000;
     color: #2c2c2c;
 }
 
@@ -47,6 +48,7 @@
 
 .card-container .price-container h2 {
     font-size: 1.2rem;
+    color: #2c2c2c;
 }
 
 .card-container .price-container h4 {

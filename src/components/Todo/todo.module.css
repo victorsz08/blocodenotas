@@ -5,8 +5,8 @@
     height: 600px;
     border-radius: 1.2rem;
     max-height: 600px;
-    overflow-x: scroll;
     color: #2c2c2c;
+    overflow-y: scroll;
 }
 
 .todo_container #info {
@@ -54,13 +54,12 @@
 .input_component input , .todo_container 
 .form_container .input_container .input_component  select {
     background-color: #fff;
-    font-weight: 400;
     padding: .8rem 1rem;
     border: 1px solid #D6D6D6;
     width: 100%;
-    font-weight: 600;
+    font-weight: 400;
     font-size: .8rem;
-    border-radius: .7rem;
+    border-radius: .6rem;
 }
 
 .todo_container .form_container .input_container 
@@ -78,8 +77,8 @@
 
 .todo_container .form_container button {
     padding: .8rem 1rem;
-    background-color: #00c01d;
-    border: 1px solid #00c01d;
+    background-color: #e90000;
+    border: 1px solid #e90000;;
     color: #FFF;
     font-weight: 400;
     border-radius: .6rem;
@@ -108,35 +107,6 @@
     margin: .8rem 0;
 }
 
-.todo_container .table_container {
-    margin-top: 2rem;
-    font-size: .8rem;
-    text-align: center;
-}
-
-.todo_container .table_container td  {
-    padding: .6rem;
-    font-weight: 400;
-    background-color: #efefef;
-    color: #2c2c2c;
-}
-
-.todo_container .table_container th {
-    background-color: #D6D6D6;
-    font-size: .8rem;
-    font-weight: 600;
-    padding: .6rem .6rem;
-}
-
-.todo_container .table_container td svg {
-    width: 1rem;
-    height: 1rem;
-    cursor: pointer;
-    transition: .2s;
-    color: #ff0000;
-}
-
-.todo_container .table_container td svg:hover {
-    transform: scale(103%);
-    color: #ff0000;
+.todo_container h4 {
+    margin-bottom: 2rem;
 }

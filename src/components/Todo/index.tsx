@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import style from "./todo.module.css";
-import { TiDelete } from "react-icons/ti";
-import { format } from "date-fns";
 import { FaCircleInfo } from "react-icons/fa6";
+import CardContract from "../CardRegister";
 
 
 const states = [
@@ -146,29 +145,20 @@ export default function TodoList() {
         </div>
         <button type="submit">Criar Registro</button>
       </form>
-      <h4>Registros</h4>
-      <table className={style.table_container}>
-        <thead>
-          <tr>
-            <th>N° do Contrato</th>
-            <th>Cidade/Estado</th>
-            <th>Número do Cliente</th>
-            <th>Data de Instalação</th>
-            <th>Ação</th>
-          </tr>
-        </thead>
-        <tbody>
-          {list && list.map((item) => (
-            <tr key={item.id}>
-              <td>{item.contract}</td>
-              <td>{item.city}/{item.state}</td>
-              <td>{item.number}</td>
-              <td>{format(new Date(item.date + 'T00:00:00'), 'dd/MM/yyyy')}</td>
-              <td><TiDelete onClick={() => handleDelete(item.id)} className={style.delete_icon} /></td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <h4>Lista de Registros:</h4>
+      <div className="list-container">
+        {list.map((item) => (
+          <CardContract 
+          city={item.city} 
+          contract={item.contract} 
+          date={item.date} 
+          number_client={item.number} 
+          state={item.state} 
+          key={item.id}
+          onCLick={() => handleDelete(item.id)}
+          />
+        ))}
+      </div>
     </section>
   );
 }

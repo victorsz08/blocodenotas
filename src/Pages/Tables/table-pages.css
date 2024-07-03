@@ -51,7 +51,7 @@
     width: 35rem;
     border-radius: .7rem;
     border: none;
-    box-shadow: 0 0 5px #d6d6d6;
+    box-shadow: 0 0 3px #d6d6d6;
 }
 
 .table-container .input-container input:focus {
