@@ -1,0 +1,55 @@
+.card-container {
+    background-color: #fff;
+    height: 400px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem;
+    box-shadow: 0 0 10px #d6d6d6;
+    border-radius: 1.2rem;
+    color: #2c2c2c;
+}
+
+.card-container .apps-container p {
+    font-size: .7rem;
+    margin-bottom: .6rem;
+}
+
+.card-container .apps-container .apps {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+
+.card-container .apps-container .apps img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.card-container .apps-container .nomeclature-container {
+    margin: 1.7rem 0;
+}
+
+.card-container .apps-container .nomeclature-container h4 {
+    font-size: .8rem;
+}
+
+.card-container .price-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.card-container .price-container h2 {
+    font-size: 1.2rem;
+}
+
+.card-container .price-container h4 {
+    font-size: .7rem;
+    font-weight: 500;
+}

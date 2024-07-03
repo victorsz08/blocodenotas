@@ -13,3 +13,10 @@
     flex-direction: column;
     gap: 30px;
 }
+
+.home-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px, 80px;
+    gap: 3rem;
+}

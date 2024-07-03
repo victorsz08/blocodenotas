@@ -38,7 +38,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 20px;
 }
 
 .nav_container a {
@@ -48,16 +48,55 @@
     align-items: center;
     gap: 2px;
     cursor: pointer;
-    font-size: .8rem;
+    font-size: .7rem;
     text-decoration: none;
     color: #FFF;
-}
-.nav_container a svg {
-    width: .6rem;
-    height: .6rem;
+    padding-left: .8rem;
+    transition: .3s;
 }
 
+.nav_container a + a {
+    color: #ffdd00;
+}
 
+.nav_container a + a + a {
+    color: #fff;
+}
+
+.nav_container a:hover {
+    border-left: 8px solid #D6D6D6;
+    transition: .3s;
+    color: #dbdbdb;
+}
+
+.layout_table {
+    transform: translateY(-1.5rem);
+}
+
+.layout_table header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    box-shadow: 0 0 5px #d6d6d6;
+    padding: 2rem 0;
+    border-radius: .9rem;
+    width: 100vw;
+}
+
+.layout_table header a {
+    font-weight: 700;
+    font-size: .8rem;
+    text-decoration: none;
+    cursor: pointer;
+    color: #6c6c6c;
+    transition: .8s;
+}
+
+.layout_table header a:hover {
+    color: #000;
+    transition: .4s;
+}
 
 .footer_container {
     background-color: #e90000;

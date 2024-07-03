@@ -113,7 +113,7 @@ export default function TodoList() {
           <div className={style.box_1}>
             <div className={style.input_component}>
               <label>Número do Contrato</label>
-              <input type="text" placeholder="Ex:123456789" required value={contract} onChange={(e) => setContract(e.target.value)} />
+              <input type="text" placeholder="Contrato" required value={contract} onChange={(e) => setContract(e.target.value)} />
             </div>
             <div className={style.input_component}>
               <label>Estado</label>
@@ -136,7 +136,7 @@ export default function TodoList() {
           <div className={style.box_2}>
             <div className={style.input_component}>
               <label>Número do Cliente</label>
-              <input type="tel" required placeholder="(88) 8888-8888" value={number} onChange={(e) => setNumber(e.target.value)} />
+              <input type="tel" required placeholder="Número do cliente" value={number} onChange={(e) => setNumber(e.target.value)} />
             </div>
             <div className={style.input_component}>
               <label>Data de Instalação</label>

@@ -6,6 +6,7 @@
     border-radius: 1.2rem;
     max-height: 600px;
     overflow-x: scroll;
+    color: #2c2c2c;
 }
 
 .todo_container #info {
@@ -22,8 +23,8 @@
 }
 
 .popup {
-    font-size: .5rem;
-    width: 8rem;
+    font-size: .7rem;
+    width: 10rem;
     background-color: #fff;
     padding: .8rem;
     position: absolute;
@@ -54,11 +55,11 @@
 .form_container .input_container .input_component  select {
     background-color: #fff;
     font-weight: 400;
-    padding: .6rem;
+    padding: .8rem 1rem;
     border: 1px solid #D6D6D6;
     width: 100%;
     font-weight: 600;
-    font-size: .7rem;
+    font-size: .8rem;
     border-radius: .7rem;
 }
 
@@ -78,50 +79,53 @@
 .todo_container .form_container button {
     padding: .8rem 1rem;
     background-color: #00c01d;
+    border: 1px solid #00c01d;
     color: #FFF;
-    font-weight: 600;
-    border: none;
+    font-weight: 400;
     border-radius: .6rem;
     cursor: pointer;
     transition: .3s;
 }
 
 .todo_container .form_container button:hover {
-    background-color: #003e09;
+    background-color: transparent;
+    color: #2c2c2c;
     transition: .3s;
 }
 
 .todo_container .form_container .input_container .box_1 {
     display: grid;
-    grid-template-columns: 10rem 6rem 8rem;
+    grid-template-columns: 10rem 7rem 9rem;
     grid-template-rows: 4rem;   
     gap: 5px;
 }
 
 .todo_container .form_container .input_container .box_2 {
     display: grid;
-    grid-template-columns: 14rem 10rem;
+    grid-template-columns: 14rem 12rem;
     grid-template-rows: 4rem;
     gap: 10px;
+    margin: .8rem 0;
 }
 
 .todo_container .table_container {
-    margin-top: 1rem;
+    margin-top: 2rem;
     font-size: .8rem;
     text-align: center;
 }
 
 .todo_container .table_container td  {
     padding: .6rem;
-    font-weight: 500;
+    font-weight: 400;
     background-color: #efefef;
+    color: #2c2c2c;
 }
 
 .todo_container .table_container th {
     background-color: #D6D6D6;
-    font-size: .7rem;
+    font-size: .8rem;
     font-weight: 600;
-    padding: .6rem .8rem;
+    padding: .6rem .6rem;
 }
 
 .todo_container .table_container td svg {
@@ -129,6 +133,7 @@
     height: 1rem;
     cursor: pointer;
     transition: .2s;
+    color: #ff0000;
 }
 
 .todo_container .table_container td svg:hover {

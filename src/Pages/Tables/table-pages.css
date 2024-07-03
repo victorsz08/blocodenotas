@@ -1,0 +1,93 @@
+.table-container {
+    padding: 50px 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.table-container h1 {
+    font-size: 2rem;
+    color: #2d2d2d;
+    margin-bottom: 2rem;
+}
+
+.table-container .cards-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+.table-container .input-container {
+    padding: 1.8rem;
+}
+
+.table-container .input-container .citys-container {
+    padding: .8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 1.2rem;
+    box-shadow: 0 0 8px #d6d6d6;
+    width: 35rem;
+    max-height: 420px;
+    height: auto;
+    overflow-y: scroll;
+    color: #2d2d2d;
+}
+
+.table-container .input-container .citys-container p {
+    cursor: pointer;
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+.table-container .input-container input {
+    padding: .9rem 1rem;
+    width: 35rem;
+    border-radius: .7rem;
+    border: none;
+    box-shadow: 0 0 5px #d6d6d6;
+}
+
+.table-container .input-container input:focus {
+    outline: 0;
+}
+
+.btn-reset {
+    padding: .8rem 1rem;
+    margin: 1rem 0;
+    border: 1px solid #e90000;
+    background-color: #e90000;
+    color: #fff;
+    cursor: pointer;
+    border-radius: .6rem;
+    transition: .4s;
+}
+
+.btn-reset:hover {
+    background-color: #fff;
+    color: #2d2d2d;
+    transition: .4s;
+}
+
+.infos-clarotv {
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    color: #2d2d2d;
+}
+
+.infos-clarotv h4 {
+    font-size: .9rem;
+}
+
+.infos-clarotv p {
+    font-size: .7rem;
+}

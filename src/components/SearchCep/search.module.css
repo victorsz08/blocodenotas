@@ -24,19 +24,20 @@
 }
 
 .search_cep_container button {
+    padding: .7rem 1.8rem;
     background-color: #00c01d;
-    color: #fff;
-    font-weight: 600;
-    padding: .7rem 1rem;
-    border-radius: .8rem;
-    border: none;
+    border: 1px solid #00c01d;
+    color: #FFF;
+    font-weight: 400;
+    border-radius: .6rem;
     cursor: pointer;
-    transition: .2s;
+    transition: .3s;
 }
 
 .search_cep_container button:hover {
-    background-color: #00460b;
-    transition: .2s;
+    background-color: transparent;
+    color: #2c2c2c;
+    transition: .3s;
 }
 
 .search_cep_container input {
